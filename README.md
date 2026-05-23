@@ -1,4 +1,4 @@
-# AI Research Agent 🔬🤖
+# AI Research Agent 
 
 An advanced AI-powered research assistant designed to automate the academic research workflow. This agent can search for recent papers on ArXiv, extract knowledge from PDFs, synthesize new research directions, and generate professional, publication-ready LaTeX PDFs.
 
@@ -9,7 +9,7 @@ An advanced AI-powered research assistant designed to automate the academic rese
 - **Synthesized Research**: Uses Google's `gemini-2.5-flash` to identify promising future research directions based on current state-of-the-art papers.
 - **LaTeX PDF Generation**: Automatically writes and renders new research papers into high-quality PDFs using the Tectonic typesetting engine.
 - **Interactive Agent Loop**: Built with LangGraph for a robust, multi-step conversational research experience.
-
+- **Streamlit Web Interface**: A clean, interactive graphical UI for managing the conversational research flow.
 ## 🏗️ Architecture
 
 The agent is built using a **ReAct (Reasoning + Acting)** framework powered by:
@@ -53,11 +53,20 @@ The agent is built using a **ReAct (Reasoning + Acting)** framework powered by:
 
 ## 📖 Usage
 
-Run the main agent script to start a research session:
+### Option 1: Streamlit Web UI (Recommended)
+Run the interactive web interface for a user-friendly conversational experience:
 
 ```bash
-python ai_researcher.py
+streamlit run frontend.py
 ```
+
+### Option 2: Terminal/CLI Mode
+Run the main agent script to start a research session directly in the terminal:
+
+```bash
+python ai_researcher2.py
+```
+*(Note: `ai_researcher2.py` contains the latest agent setup with optimized prompt structures and safety threshold configurations.)*
 
 ### Example Workflow:
 1. **Topic Selection**: Discuss a research area (e.g., "Quantum Neural Networks").
@@ -69,7 +78,8 @@ python ai_researcher.py
 
 ## 📂 Project Structure
 
-- `ai_researcher.py`: The main entry point and agent logic.
+- `frontend.py`: Streamlit-based graphical user interface.
+- `ai_researcher2.py` / `ai_researcher.py`: The main entry point and agent logic for the CLI and backend.
 - `arxiv_tool.py`: custom tool for searching the ArXiv API.
 - `read_pdf.py`: Tool for extracting text from online PDF files.
 - `write_pdf.py`: Tool for rendering LaTeX content into PDFs using Tectonic.
