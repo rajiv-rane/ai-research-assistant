@@ -93,9 +93,5 @@ python ai_researcher2.py
 - **PyPDF2**: PDF text extraction.
 - **Requests**: API communication.
 
-## 📝 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
 ---
 *Built with ❤️ for the research community.*
